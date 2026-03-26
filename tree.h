@@ -11,7 +11,9 @@ typedef enum{
 
 typedef enum{
     SUCCESS,
-    FAILURE
+    FAILURE,
+    DATA_NOT_FOUND,
+    TREE_EMPTY
 } Status;
 
 typedef struct node{
@@ -25,8 +27,12 @@ typedef struct node{
 void display_tree(node_t *root);
 
 Status insert(node_t **root, int data);
+Status search_t(node_t *root, int key);
+int find_min(node_t *root);
+int find_max(node_t *root);
+
 color_t recolor(node_t *node);
-Status balance_t(node_t **root, node_t *new_node);
+void balance_t(node_t **root, node_t *new_node);
 
 void left_rotation(node_t **root, node_t *x);
 void right_rotation(node_t **root, node_t *x);

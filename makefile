@@ -2,7 +2,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -g
 
 # List of all the core utility files (everything except main files)
-SRCS = insertion.c display.c tree_utils.c rotation.c
+SRCS = insertion.c display.c tree_utils.c rotation.c search.c find_min.c find_max.c
 OBJS = $(SRCS:.c=.o)
 
 # Executable names
